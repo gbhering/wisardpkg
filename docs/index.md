@@ -6,9 +6,9 @@ Here you will find out how to use all the resources of this library.
 ## List of classes available:
 
 1. Models
-  1. [Wisard](https://iazero.github.io/wisardpkg/models/wisard)
-  2. [ClusWisard](https://iazero.github.io/wisardpkg/models/cluswisard)
-  3. [Discriminator](https://iazero.github.io/wisardpkg/models/discriminator)
+   1. [Wisard](https://iazero.github.io/wisardpkg/models/wisard)
+   2. [ClusWisard](https://iazero.github.io/wisardpkg/models/cluswisard)
+   3. [Discriminator](https://iazero.github.io/wisardpkg/models/discriminator)
 
 2. Binarization
   1. [KernelCanvas](https://iazero.github.io/wisardpkg/binarization/kernelcanvas)
