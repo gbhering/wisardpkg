@@ -1,19 +1,19 @@
 # wisardpkg [![](https://img.shields.io/pypi/v/wisardpkg.svg)](https://pypi.org/project/wisardpkg/) [![](https://travis-ci.org/IAZero/wisardpkg.svg?branch=master)](https://travis-ci.org/IAZero/wisardpkg)
 
-## Description:
+## Description
 This is a project to make available the different models based on WiSARD,
 with high performance, ease of usage and to installation and following a single usage pattern for simplicity.
 These provided models are machine learning models, with supervised, unsupervised and semi-supervised learning.
 
-## to install:
+## Install
 ### pip
 ```bash
 pip install wisardpkg
 ```
 Works with both python2 and pyhton3.  
-If you are on not in a virtual environment, you may need to run as su (by appending `sudo` to the beginning).
+If you are not in a virtual environment, you may need to run as su (by appending `sudo` to the beginning).
 
-#### windows
+#### Windows
 To install on windows platform you can use [anaconda](https://anaconda.org/) and run:
 ##### python
 ```bash
@@ -25,12 +25,12 @@ copy the file wisardpkg.hpp into your project
 include/wisardpkg.hpp
 ```
 
-## to uninstall:
+## Uninstall
 ```bash
 pip uninstall wisardpkg
 ```
 
-## to import:
+## Import
 ### python
 ```python
 import wisardpkg as wp
@@ -42,7 +42,7 @@ import wisardpkg as wp
 namespace wp = wisardpkg;
 ```
 
-## to use:
+## Usage
 ### WiSARD
 
 WiSARD with bleaching by default:
