@@ -2,40 +2,40 @@
 
 ## Description:
 This is a project to make available the different models based on WiSARD,
-with high performance, easy to use and to install and following a pattern of use.
-These provided models are machine learning models,
-with supervised, unsupervised and semi-supervised learning.
+with high performance, ease of usage and to installation and following a single usage pattern for simplicity.
+These provided models are machine learning models, with supervised, unsupervised and semi-supervised learning.
 
 ## to install:
-python:
-```
+### pip
+```bash
 pip install wisardpkg
 ```
-Works to python2 and pyhton3.  
-If you are on Linux and not in a virtual environment, you may need to run as superuser.
+Works with both python2 and pyhton3.  
+If you are on not in a virtual environment, you may need to run as su (by appending `sudo` to the beginning).
 
-#### obs:
-To install on windows platform you can use [anaconda](https://anaconda.org/) and do:
-```
+#### windows
+To install on windows platform you can use [anaconda](https://anaconda.org/) and run:
+##### python
+```bash
 python -m pip install wisardpkg
 ```
-c++:
-copy the file wisardpkg.hpp inside your project 
-```
+##### C++
+copy the file wisardpkg.hpp into your project 
+```C++
 include/wisardpkg.hpp
 ```
 
 ## to uninstall:
-```
+```bash
 pip uninstall wisardpkg
 ```
 
 ## to import:
-python:
+### python
 ```python
 import wisardpkg as wp
 ```
-c++:
+### C++
 ```c++
 # include "wisardpkg.hpp"
 
@@ -47,7 +47,7 @@ namespace wp = wisardpkg;
 
 WiSARD with bleaching by default:
 
-python:
+#### python
 ```python
 # load input data, just zeros and ones  
 X = [
@@ -83,13 +83,13 @@ wsd.train(X,y)
 # classify some data
 out = wsd.classify(X)
 
-# the output of classify is a string list in the same sequence as the input
+# the output of classify() is a string list in the same sequence as the input
 for i,d in enumerate(X):
-    print(out[i],d)
+   print(out[i],d)
 ```
-c++:
-```c++
 
+#### C++
+```C++
 vector<vector<int>> X(4);
 X[0] = {1,1,1,0,0,0,0,0};
 X[1] = {1,1,1,1,0,0,0,0};
@@ -116,7 +116,6 @@ vector<string> out = w.classify(X);
 for(int i=0; i<4; i++){
       cout << "i: " << i << "; class: " << out[i] << endl;
 }
-
 ```
 ### ClusWiSARD
 
