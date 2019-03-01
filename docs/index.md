@@ -5,14 +5,14 @@ Welcome to the wisardpkg documentation! Here you will find out how to use all th
 ## List of classes available:
 
 1. Models
-   1. [Wisard](/models/wisard)
-   2. [ClusWisard](/models/cluswisard)
-   3. [Discriminator](/models/discriminator)
+   1. [Wisard](https://iazero.github.io/wisardpkg/models/wisard)
+   2. [ClusWisard](https://iazero.github.io/wisardpkg/models/cluswisard)
+   3. [Discriminator](https://iazero.github.io/wisardpkg/models/discriminator)
 2. Binarization
-   1. [KernelCanvas](/binarization/kernelcanvas)
+   1. [KernelCanvas](https://iazero.github.io/wisardpkg/binarization/kernelcanvas)
 3. Dataset binary
-   1. [BinInput](/data/bininput)
-   2. [DataSet](/data/dataset)
+   1. [BinInput](https://iazero.github.io/wisardpkg/data/bininput)
+   2. [DataSet](https://iazero.github.io/wisardpkg/data/dataset)
 4. Others
-   1. [Sythesizer](/others/synthesizer)
-   2. [RAMDataHandle](/others/ramdatahandle)
+   1. [Sythesizer](https://iazero.github.io/wisardpkg/others/synthesizer)
+   2. [RAMDataHandle](https://iazero.github.io/wisardpkg/others/ramdatahandle)
