@@ -1,6 +1,6 @@
 # WiSARDPKG 
 
-## Welcome to the wisardpkg documentation!
+##### Welcome to the wisardpkg documentation!
 Here you will find out how to use all the resources of this library.
 
 ## List of classes available:
