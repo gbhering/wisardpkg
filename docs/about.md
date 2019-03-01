@@ -1,4 +1,4 @@
-# This library was built with the contribution of:
+# This library was built with the contributions of:
 * Aluizio Lima Filho
 * Gabriel Guarisa
 * Luiz Fernando
