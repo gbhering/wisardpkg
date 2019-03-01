@@ -14,16 +14,13 @@ Works with both python2 and pyhton3.
 If you are not in a virtual environment, you may need to run as su (by appending `sudo` to the beginning).
 
 #### Windows
+##### Python
 To install on windows platform you can use [anaconda](https://anaconda.org/) and run:
-##### python
 ```bash
 python -m pip install wisardpkg
 ```
 ##### C++
-copy the file wisardpkg.hpp into your project 
-```C++
-include/wisardpkg.hpp
-```
+You can include the header file `include/wisardpkg.hpp` in your project. 
 
 ## Uninstall
 ```bash
@@ -31,7 +28,7 @@ pip uninstall wisardpkg
 ```
 
 ## Import
-### python
+### Python
 ```python
 import wisardpkg as wp
 ```
@@ -47,7 +44,7 @@ namespace wp = wisardpkg;
 
 WiSARD with bleaching by default:
 
-#### python
+#### Python
 ```python
 # load input data, just zeros and ones  
 X = [
@@ -156,9 +153,9 @@ for i,d in enumerate(X):
     print(out[i], d)
 ```
 
-## Documentation:
-You can find the complete documentation in the [page](https://iazero.github.io/wisardpkg/).
+## Documentation
+You can find the complete documentation in [iazero.github.io/wisardpkg](https://iazero.github.io/wisardpkg/).
 
-## Build on libraries:
+## Built with
 [pybind11](https://github.com/pybind/pybind11)
 [nlohmann/json](https://github.com/nlohmann/json)
