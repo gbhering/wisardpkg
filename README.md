@@ -2,7 +2,7 @@
 
 ## Description
 This is a project to make available the different models based on WiSARD,
-with high performance, ease of usage and to installation and following a single usage pattern for simplicity.
+with high performance, ease of usage and installation and following a single usage pattern for simplicity.
 These provided models are machine learning models, with supervised, unsupervised and semi-supervised learning.
 
 ## Install
@@ -157,5 +157,5 @@ for i,d in enumerate(X):
 You can find the complete documentation in [iazero.github.io/wisardpkg](https://iazero.github.io/wisardpkg/).
 
 ## Built with
-[pybind11](https://github.com/pybind/pybind11)
-[nlohmann/json](https://github.com/nlohmann/json)
+- [pybind11](https://github.com/pybind/pybind11)
+- [nlohmann/json](https://github.com/nlohmann/json)
