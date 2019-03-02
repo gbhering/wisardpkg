@@ -1,58 +1,67 @@
 # Wisard
-## constructors:
-### type 1
+## Constructors
+### Type 1
 ```python
-addressSize=3
-
 wsd = Wisard(
-   addressSize,              # required
-   bleachingActivated=True,  # optional
-   ignoreZero=False,         # optional
-   completeAddressing=True,  # optional
-   verbose=False,            # optional
-   indexes=[],               # optional
-   base=2,                   # optional
-   confidence=1,             # optional
+       addressSize,               # type: int
+       bleachingActivated=True,   # type: bool
+       ignoreZero=False,          # type: bool
+       completeAddressing=True,   # type: bool
+       verbose=False,             # type: bool
+       indexes=[],                # type: List[float]
+       base=2,                    # type: int
+       confidence=1,              # type: int
 
    ## types of return of classify
-   returnActivationDegree=False, # optional
-   returnConfidence=False,       # optional
-   returnClassesDegrees=False    # optional
+   returnActivationDegree=False,  # type: bool
+   returnConfidence=False,        # type: bool
+   returnClassesDegrees=False     # type: bool
 )
 ```
-The default value for the optional parameters are showing in the example above.
-- **addressSize: [int]** is the size of addressing RAM.
-- **bleachingActivated: [boolean]** this enable or disable the bleaching process on the classification.
-- **ignoreZero: [boolean]** this enable or disable the wisard to read the address zero in each RAM.
-- **completeAddressing: [boolean]** this enable or disable the automatic complete of addressing in the case when the size of entry is not divisible by address size, this create redundant information, but address all indexes of entry.
-- **verbose: [boolean]** enable or disable prints of the progress of train() and classify()
-- **indexes: [list(int)]** this is to use a specific addressing of entry to the discriminators, all discriminators wiil use this addressing.
-- **base: [int]** this is the base of addressing, by default is binary addressing.
-- **confidence: [int]** this is the difference between the number of active RAMs of the first and second discriminators classified. It is used in the classification process.
+##### addressSize: int 
+Required. Size of RAM addresses.
+##### bleachingActivated: bool 
+Optional. Enables or disables the classification bleaching process. `True` by default.
+##### ignoreZero: bool 
+Optional. Causes the wisard to read/ignore address zero in each RAM. `False` by default.
+##### completeAddressing: bool 
+Optional. Enables or disables the automatic completion of addresses in cases where the entry size is not divisible by the address size. This creates redundant information, but addresses every entry index. `True` by default.
+##### verbose: bool 
+Optional. Enable or disables priting of train() and classify() progress. May incur in severe performance reduction. `False` by default.
+##### indexes: list[int] 
+Optional. Populate this to use a specific entry addressing for the discriminators. All discriminators wiil use this addressing. Empty `List` by default.
+##### base: int 
+Optional. This is the base/radix of addresses, `2` by default as the default behavior is binary addressing.
+##### confidence: int 
+Optional. This is the difference between the number of active RAMs of the first and second discriminators classified. It is used in the classification process. `1` by default.
 
 #### Types of return of classify:
-By default the parameters 'returnActivationDegree', returnClassesDegrees and 'returnConfidence' are false, for performance reasons.
-- **returnActivationDegree: [boolean]** when true, add the activation degree value to each output.
-- **returnConfidence: [boolean]** when true, add the confidence value to each output.
-- **returnClassesDegrees: [boolean]** when true, add the list of degrees of each class.
-When 'returnActivationDegree' or 'returnConfidence' are true the classify will return a list of dictionaries in the following format:
+These parameters default to `False` for performance reasons.
+##### returnActivationDegree: bool
+Optional. When `True`, appends the activation degree value to each output. `False` by default.
+##### returnConfidence: bool
+Optional. When `True`, appends the confidence value to each output. `False` by default.
+##### returnClassesDegrees: bool
+Optional. When `True`, outputs the list of degrees of each class. `False` by default.
+
+The appended return of `classify()` when any of the three enabled is a list of dictionaries in the following format:
 ```python
 [
   {'class': 'cold', 'activationDegree': 1.0, 'confidence': 0.800000011920929},
   {'class': 'hot', 'activationDegree': 1.0, 'confidence': 1.0}
 ]
 ```
-If only one of them is true, so only it will appear in the dictionary.
-when all are false, so the classify method will return a list of strings.
+If only one of them is `True`, only one item will appear in the dictionary, and so on and so forth.
+When all are `False`, `classify()` will return a list of strings.
 
-### type 2
+### Type 2
 ```python
 jsonConfig = wsd.json()
 wsd2 = Wisard(jsonConfig)
 ```
 The wisard can be saved with json or jsonConfig methods and reloaded later with this value.
 
-## methods:
+## Methods
 ### train
 This method train with the data passed to it.
 ```python
